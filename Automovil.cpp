@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Automovil::Automovil() : encendido(false), velocidad(0), luces(), tanque(42.0)
+Automovil::Automovil() : encendido(false), velocidad(0), luces(), tanque(42)
 {
     for (int i = 0; i < 4; i++)
     {
@@ -128,6 +128,6 @@ int Automovil::getPresionLlanta(int numeroLlanta)
 
 int Automovil::getPorcentajeNivelGasolina()
 {
-    float porcentaje = (tanque.getNivel() / tanque.getCapacidad()) * 100.0f;
+    float porcentaje = (tanque.getNivel() / tanque.getCapacidad()) * 100.0;
     return static_cast<int>(porcentaje);
 }
