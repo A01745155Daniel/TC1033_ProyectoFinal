@@ -2,28 +2,40 @@
 Daniel Guerrero González A01745155
 Proyecto final
 */
-#include "TanqueGasolina.h"
-#include "Luz.h"
 #include "Llanta.h"
+#include "Luz.h"
+#include "TanqueGasolina.h"
 
-#ifndef AUTOMOVIL.H
-#define AUTOMOVIL.H
+#ifndef AUTOMOVIL_H
+#define AUTOMOVIL_H
+
 class Automovil
 {
 private:
-    bool estado;
+    bool encendido;
     int velocidad;
-    TanqueGasolina tanque;
+    Llanta llantas[4];
     Luz luces;
-    Llanta llantas;
+    TanqueGasolina tanque;
 
-    
 public:
-    void encendidoApagado();
-    void acelerar(int);
-    void frenar(int);
+    Automovil();
 
+    void prenderApagar();
+    void acelerar();
+    void frenar();
+    void prenderLuces();
+    void apagarLuces();
+    void cargarGasolina(float litros);
+
+    bool estaEncendido();
+    int getVelocidad();
+    float getGasolina();
+    bool tieneLucesPrendidas();
+    Llanta &getLlanta(int numeroLlanta);
+    bool estaEnEstadoDePeligro(int numeroLlanta);
+    int getPresionLlanta(int numeroLlanta);
+    int getPorcentajeNivelGasolina();
 };
 
 #endif
-

@@ -1,11 +1,33 @@
 #include "Llanta.h"
 
-int Llanta::inflar()
+Llanta::Llanta()
 {
-    return 0;
+    presion = 33.0;       
+    presionNormal = 33.0; 
 }
 
-int Llanta::desinflar()
+Llanta::Llanta(int presionInicial, int presionNormal)
 {
-    return 0;
+    presion = presionInicial;
+    this->presionNormal = presionNormal;
+}
+
+int Llanta::getPresion()
+{
+    return presion;
+}
+
+void Llanta::setPresion(int presion)
+{
+    this->presion = presion;
+}
+
+int Llanta::getPresionNormal()
+{
+    return presionNormal;
+}
+
+void Llanta::setPresionNormal(int presionNormal)
+{
+    this->presionNormal = presionNormal;
 }

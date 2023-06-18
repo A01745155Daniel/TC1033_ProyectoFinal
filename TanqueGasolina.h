@@ -1,11 +1,24 @@
 /*
 Clase tanque de gasolina
 */
+#ifndef TANQUEGASOLINA_H
+#define TANQUEGASOLINA_H
+
 class TanqueGasolina
 {
 private:
-    int capacidadTanque;
-    float porcentajeT;
+    float capacidad;
+    float nivel;
+
 public:
-    float cargarGas();
+    TanqueGasolina(float capacidad);
+    float getCapacidad();
+    float getNivel();
+    void llenar();
+    void vaciar();
+    void cargar(float litros);
+    void consumirGasolina(float consumo);
+    float getPorcentajeNivel();
 };
+
+#endif
