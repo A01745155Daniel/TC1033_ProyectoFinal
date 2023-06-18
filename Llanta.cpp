@@ -2,8 +2,8 @@
 
 Llanta::Llanta()
 {
-    presion = 33.0;       
-    presionNormal = 33.0; 
+    presion = 33;       
+    presionNormal = 33; 
 }
 
 Llanta::Llanta(int presionInicial, int presionNormal)
