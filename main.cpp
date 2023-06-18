@@ -44,7 +44,7 @@ int main()
         else if (opcion == 3)
         {
             carro.frenar();
-            cout << "Velocidad actual: " << carro.getVelocidad() << " km/h" << std::endl;
+            cout << "Velocidad actual: " << carro.getVelocidad() << " km/h" << endl;
         }
         else if (opcion == 4)
         {
